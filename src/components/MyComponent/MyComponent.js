@@ -1,20 +1,26 @@
-import React from 'react';
+import React from "react";
 
 class MyComponent extends React.Component {
+  state = {
+    text: "test state",
+  };
 
+  handleChange = (event) => {
+   this.setState({text:event.target.value.toUpperCase()});
+  };
 
-    state = {
-        text : 'test state',
-    }
-
-    render() {
-        return (
-            <>
-            <input placeholder='your text' />
-            <h1>{this.state.text}</h1>
-            </>
-        )
-    }
+  render() {
+    return (
+      <>
+        <input 
+        placeholder="your text" 
+        onChange={this.handleChange} 
+        value ={this.state.text}
+        />
+        <h1>{this.state.text}</h1>
+      </>
+    );
+  }
 }
 
-export default MyComponent
+export default MyComponent;
