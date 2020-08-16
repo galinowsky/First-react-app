@@ -1,6 +1,6 @@
 import React from "react";
 import ListItem from "./ListItem/ListItem.js";
-// import "./listWrapper.css";
+import "./listWrapper.css";
 // import { twitterAccounts } from "../../data/twitterAccounts";
 
 // console.log(twitterAccounts[0].name);
