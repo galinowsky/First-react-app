@@ -25,6 +25,11 @@
     height: 150px;
     border-radius: 50%;
 }
+.imageNone {
+    @extend .image;
+    background: url('https://img1.looper.com/img/gallery/the-worst-thing-thats-ever-happened-to-jerry-on-rick-and-morty/intro-1567519981.jpg');
+    background-size: cover;
+}
 
 .name {
     margin: 0;
