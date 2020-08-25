@@ -1,16 +1,26 @@
 .navigation{
-   margin: auto;
-    width: 70vw;
+//    margin: auto;
+    // width: 100vw;
+ 
+    height: 8vh;
+       
+&Wrapper{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: 8vh;
-       
-
 }
 
-.link {
+&__item {
     color: #1E58FF;
     text-decoration: none;
+    list-style: none;
+    &Link  {
+        text-decoration: none;
+        color: #818181;
+       &Active {
+           font-weight: 700;
+       }
     }
+}
+}
