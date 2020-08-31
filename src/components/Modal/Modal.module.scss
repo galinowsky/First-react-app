@@ -1,0 +1,14 @@
+.wrapper {
+  padding: 50px 80px;
+  width: 60vw;
+  height: 70vh;
+  margin: auto;
+  box-shadow: 0 10px 40px -10px rgba(#818181, 0.5);
+  position: relative;
+}
+
+.exitButton {
+  top: 0;
+  right: 0;
+  position: absolute;
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Button.module.scss';
 import PropTypes from "prop-types";
 
-const Button = ({ children, href, secondary }) => {
+const Button = ({ children, href, secondary, onClick }) => {
   const buttonClass = secondary ? styles.buttonInverted : styles.button
   return (<>
   
@@ -18,7 +18,7 @@ const Button = ({ children, href, secondary }) => {
           {children}
         </a>
       ) : (
-          <button className={buttonClass}>
+          <button className={buttonClass} onClick={onClick}>
             {children}
           </button>
         )
