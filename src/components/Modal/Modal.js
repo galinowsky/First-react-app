@@ -5,7 +5,7 @@ import Button from '../Button/Button'
 const Modal = ({closeModalFn}) => (
 
 <div className={styles.wrapper}>
-<Button className={styles.exitButton} onClick={closeModalFn}>x</Button>
+<button className={styles.exitButton} onClick={closeModalFn}>x</button>
 <Form></Form>
 
 
