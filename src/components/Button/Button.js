@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 const Button = ({ children, href, secondary, onClick }) => {
   const buttonClass = secondary ? styles.buttonInverted : styles.button
+
   return (<>
   
     {
@@ -18,7 +19,7 @@ const Button = ({ children, href, secondary, onClick }) => {
           {children}
         </a>
       ) : (
-          <button className={buttonClass} onClick={onClick}>
+          <button className={buttonClass} onClick={onClick }>
             {children}
           </button>
         )
@@ -30,6 +31,7 @@ const Button = ({ children, href, secondary, onClick }) => {
 };
 Button.defaultProps = {
   secondary: false,
+  open:true
 }
 export default Button;
 
