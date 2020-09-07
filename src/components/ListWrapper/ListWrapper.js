@@ -5,12 +5,20 @@ import styles from "./listWrapper.module.scss";
 
 // console.log(twitterAccounts[0].name);
 
-const ListWrapper = props => (
+const ListWrapper = (twitters) => {
+   console.log(twitters.props)
+   
+return(
+
   <ul className={styles.wrapper}>
-    {props.items.map(item => (
-      <ListItem key={item.name} {...item} />
-    ))}
+    {/* {twitters.props.map(item => (
+      <ListItem key={twitters.props.type} {...item} />
+    ))} */}
   </ul>
-);
+)
+
+}
+
+
 
 export default ListWrapper;

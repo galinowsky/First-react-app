@@ -3,26 +3,30 @@ import styles from "./ListItem.module.scss";
 import PropTypes from "prop-types";
 import Button from "../../Button/Button";
 import Title from "../../Title/Title";
-const ListItem = ({ image, name, description, twitterLink }) => {
+const ListItem = ({ image, title: name, description, link: twitterLink }) => {
   const ImageTag = image ? "img" : "div";
   return (
     <li className={styles.wrapper}>
-      <ImageTag
-        src={image}
-        className={image ? styles.image : styles.imageNone}
-        alt={name}
-      />
+      {image ? (
+        <ImageTag
+          src={image}
+          className={image ? styles.image : styles.imageNone}
+          alt={name}
+        />
+      ) : null}
+
       <div>
         <Title className={styles.name}>{name}</Title>
         <p className={styles.description}>{description}</p>
-        <Button
-          href={twitterLink}
-          target="_blank"
-          className={styles.button}
-          rel="noopener noreferrer"
-        >
-          visit twitter page
-        </Button>
+        {twitterLink ? (
+          <Button
+            href={twitterLink}
+            target="_blank"
+            className={styles.button}
+            rel="noopener noreferrer"
+          ></Button>
+        ) : null}
+        visit twitter page
       </div>
     </li>
   );
@@ -30,14 +34,14 @@ const ListItem = ({ image, name, description, twitterLink }) => {
 
 ListItem.propTypes = {
   image: PropTypes.string,
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string,
-  twitterLink: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  link: PropTypes.string,
 };
 
 ListItem.defaultProps = {
   image: null,
-  description: "One of the React creators",
+  link: null,
 };
 
 export default ListItem;
