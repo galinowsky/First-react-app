@@ -6,7 +6,7 @@ return (
     <AppContext.Consumer>
         {(context) =>    
           
-        <p>This is  {context}</p> }
+        <p>This is  view</p> }
  
     </AppContext.Consumer>
 )
