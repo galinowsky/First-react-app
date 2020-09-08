@@ -1,17 +1,12 @@
-import React from 'react'
-import AppContext from '../../context'
+import React from "react";
+import AppContext from "../../context";
+import ListWrapper from "../../components/ListWrapper/ListWrapper";
 const ArticlesView = () => {
-    
-return (
+  return (
     <AppContext.Consumer>
-        {(context) =>    
-          
-        <p>This is  view</p> }
- 
+      {(context) => <ListWrapper props={context.article} />}
     </AppContext.Consumer>
-)
+  );
+};
 
- 
-}
-
-export default ArticlesView
+export default ArticlesView;

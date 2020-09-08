@@ -82,7 +82,7 @@ class Form extends React.Component {
                 label={
                   type === types.twitter ? "Twitter Name" : "Title"
                 }
-                maxLength={30}
+
               />
               {type === types.note ? null : (
                 <Input

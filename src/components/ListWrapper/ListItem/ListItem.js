@@ -7,26 +7,26 @@ const ListItem = ({ image, title: name, description, link: twitterLink }) => {
   const ImageTag = image ? "img" : "div";
   return (
     <li className={styles.wrapper}>
-      {image ? (
+      {image && 
         <ImageTag
           src={image}
           className={image ? styles.image : styles.imageNone}
           alt={name}
         />
-      ) : null}
+       }
 
       <div>
         <Title className={styles.name}>{name}</Title>
         <p className={styles.description}>{description}</p>
-        {twitterLink ? (
+        {twitterLink && 
           <Button
             href={twitterLink}
             target="_blank"
             className={styles.button}
             rel="noopener noreferrer"
-          ></Button>
-        ) : null}
-        visit twitter page
+          >  visit {image && 'twitter'} page</Button>
+       }
+      
       </div>
     </li>
   );

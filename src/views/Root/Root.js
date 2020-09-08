@@ -7,10 +7,26 @@ import NotesView from "../NotesView/NotesView";
 import Header from "../../components/Header/Header";
 import Modal from "../../components/Modal/Modal";
 import AppContext from "../../context";
-
 class Root extends React.Component {
   state = {
-    twitter: [],
+    twitter: [{
+      title: 'lorem ipsum',
+      description: 'dolor sit amet lorem ipsum psum dolor',
+      link: 'https://google.com',
+      image: 'https://i.picsum.photos/id/9/200/200.jpg?hmac=KeGvZtsfErXTVxRSy5Kev3vLnJBdBYcYoGviv8RE5Vk'
+    },
+    {
+      title: 'lorem ipsum',
+      description: 'dolor sit amet lorem ipsum psum dolor',
+      link: 'https://google.com',
+      image: 'https://i.picsum.photos/id/9/200/200.jpg?hmac=KeGvZtsfErXTVxRSy5Kev3vLnJBdBYcYoGviv8RE5Vk'
+    },
+    {
+      title: 'lorem ipsum',
+      description: 'dolor sit amet lorem ipsum psum dolor',
+      link: 'https://google.com',
+      image: 'https://i.picsum.photos/id/9/200/200.jpg?hmac=KeGvZtsfErXTVxRSy5Kev3vLnJBdBYcYoGviv8RE5Vk'
+    }],
     article: [],
     note: [],
     isModalOpen: false,
@@ -48,7 +64,7 @@ class Root extends React.Component {
       <BrowserRouter>
         <AppContext.Provider value={contextElements}>
           <Header openModalFn={this.openModal} />
-          <h1>Hello world</h1>
+     
           <Switch>
             <Route exact path="/" component={TwittersView}></Route>
             <Route exact path="/article" component={ArticlesView}></Route>
